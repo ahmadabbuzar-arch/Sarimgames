@@ -1,0 +1,39 @@
+{
+  "rewrites": [
+    {
+      "source": "/games",
+      "destination": "/games.html"
+    },
+    {
+      "source": "/games/",
+      "destination": "/games.html"
+    },
+    {
+      "source": "/src/:file",
+      "destination": "/:file"
+    },
+    {
+      "source": "/compression/:file",
+      "destination": "/:file"
+    },
+    {
+      "source": "/cores/:file",
+      "destination": "/:file"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "Cross-Origin-Embedder-Policy",
+          "value": "credentialless"
+        }
+      ]
+    }
+  ]
+}
